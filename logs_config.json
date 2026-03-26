@@ -1,0 +1,24 @@
+{
+    "1482947648435785891": {
+        "enabled": true,
+        "channel": 1484700651282895068,
+        "categories": {
+            "joins": true,
+            "roles": true,
+            "canales": true,
+            "mensajes": true,
+            "servidor": true
+        }
+    },
+    "1464575509785612380": {
+        "enabled": true,
+        "channel": 1466472645670207562,
+        "categories": {
+            "joins": true,
+            "roles": true,
+            "canales": true,
+            "mensajes": true,
+            "servidor": true
+        }
+    }
+}

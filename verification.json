@@ -1,0 +1,120 @@
+{
+    "1464575509785612380": {
+        "1": {
+            "rol_dar": 1466470039195750522,
+            "rol_quitar": 1475149451923554525,
+            "titulo": "Verificacion\ud83d\udd10",
+            "descripcion": "\u00a1Bienvenido/a! Antes de acceder al servidor, **necesitamos que completes una peque\u00f1a verificaci\u00f3n** para garantizar la seguridad de la comunidad.\n**\u2705 Instrucciones:**\nHaz clic en el bot\u00f3n de abajo para verificarte.\nAseg\u00farate de haber le\u00eddo las normas del servidor.\nUna vez verificado/a, se te dar\u00e1 acceso completo.\n**\u26a0\ufe0f Importante:**\nSi tienes problemas con la verificaci\u00f3n, no dudes en abrir ticket",
+            "mensaje": null,
+            "imagen": "https://cdn.discordapp.com/attachments/1483535097729908821/1484234374533873695/copilot_image_1773756821678.jpg?ex=69bf76ba&is=69be253a&hm=60882bf706f2ddf96c72cb41e5469865f7b1628834e889dcc56234a01848d1c1&",
+            "boton": "Verificarme",
+            "tipo": "normal",
+            "captcha_texto": "Verif\u00edcate por seguridad del servidor",
+            "canal_logs": 1466472693837860991
+        }
+    },
+    "1434615604060360908": {
+        "1485201297354395780": {
+            "rol_dar": 1477662763932188803,
+            "rol_quitar": null,
+            "titulo": "\u00a1Bienvenido verif\u00edquese!",
+            "descripcion": "\u26a1\ufe0f Somos un server lleno de rol\n\ud83d\udd28 M\u00e1laga rp!",
+            "mensaje": "ya se ha verificado",
+            "imagen": "https://cdn.discordapp.com/attachments/1463940341207011449/1485202298266193952/IMG_7731.gif?ex=69c101ed&is=69bfb06d&hm=e5935f23f54fac51cea8cbbaac403b801d3cf7ca7bed58e83c469656a7cd8bb3&",
+            "boton": "Verificarse",
+            "tipo": "normal",
+            "captcha_texto": "Verif\u00edcate por seguridad del servidor",
+            "canal_logs": 1482437626417119382
+        },
+        "Malaga": {
+            "rol_dar": 1477662763932188803,
+            "rol_quitar": null,
+            "titulo": "\u00a1Beinvenido a Verificacion De M\u00e1laga!",
+            "descripcion": "\u26a1\ufe0f este bot es para anti-raids como para verificarse.\n\ud83d\udd28 ahora mismo este comando fue creado por un mod de moddybot.\n\ud83c\udd98 si necesita ayuda contacta al soporte.",
+            "mensaje": "recuerde no spammear el bot\u00f3n, puede salir un fallo.",
+            "imagen": "https://cdn.discordapp.com/attachments/1463940341207011449/1485202298266193952/IMG_7731.gif?ex=69c101ed&is=69bfb06d&hm=e5935f23f54fac51cea8cbbaac403b801d3cf7ca7bed58e83c469656a7cd8bb3&",
+            "boton": "Verificarse I Malaga Rp",
+            "tipo": "normal",
+            "captcha_texto": "Verif\u00edcate por seguridad del servidor",
+            "canal_logs": 1482437626417119382
+        },
+        "Malaga_I_2": {
+            "rol_dar": 1477662763932188803,
+            "rol_quitar": null,
+            "titulo": "\u00a1Bienvenido a Verificaciones de M\u00e1laga Rp!",
+            "descripcion": "\u26a1\ufe0f recuerde respetar las normas.\n\ud83d\udd28 este mensaje lo ha hecho un moderador del server ModdyBot.\n\ud83c\udd98 si necesita ayuda contacte al Soporte.",
+            "mensaje": "-# no haga spam al captcha",
+            "imagen": "https://cdn.discordapp.com/attachments/1463940341207011449/1485202298266193952/IMG_7731.gif?ex=69c101ed&is=69bfb06d&hm=e5935f23f54fac51cea8cbbaac403b801d3cf7ca7bed58e83c469656a7cd8bb3&",
+            "boton": "Verificacrse I M\u00e1laga Rp I 1",
+            "tipo": "captcha",
+            "captcha_texto": "Presione el bot\u00f3n, y ponga lo n\u00fameros y letras de abajo para verificarse.",
+            "canal_logs": 1482437626417119382
+        },
+        "malaga": {
+            "rol_dar": 1477662763932188803,
+            "rol_quitar": 1477662785432195094,
+            "titulo": "\u00a1Verificacion!",
+            "descripcion": "\u26a1\ufe0f verif\u00edquese para mejor el en M\u00e1laga rp.\n\u26a1\ufe0f recuerde no hacer anti y leerse las reglas en. <#1477662867418517517> \ud83d\udd28- <#1477662871650304002> \n\u26a1\ufe0f este mensaje ha sido creado por un moderador oficial de moddy bot",
+            "mensaje": "-# no presione mucho el bot\u00f3n.",
+            "imagen": "https://cdn.discordapp.com/attachments/1463940341207011449/1485202298266193952/IMG_7731.gif?ex=69c101ed&is=69bfb06d&hm=e5935f23f54fac51cea8cbbaac403b801d3cf7ca7bed58e83c469656a7cd8bb3&",
+            "boton": "Verificarse",
+            "tipo": "captcha",
+            "captcha_texto": "Agregue las letras o n\u00fameros, despu\u00e9s de tocar el bot\u00f3n.",
+            "canal_logs": 1482437626417119382
+        }
+    },
+    "1470187143409307836": {
+        "yy": {
+            "rol_dar": 1470211416769167596,
+            "rol_quitar": 1470213143102885888,
+            "titulo": "ee",
+            "descripcion": "eee",
+            "mensaje": "eee",
+            "imagen": null,
+            "boton": "ee",
+            "tipo": "captcha",
+            "captcha_texto": "Hola",
+            "canal_logs": 1470187144436777167
+        }
+    },
+    "1483535097729908818": {
+        "6": {
+            "rol_dar": 1483543777334263808,
+            "rol_quitar": 1483546670280212672,
+            "titulo": "Verificaci\u00f3n",
+            "descripcion": "Verificate para acceder a los dem\u00e1s canales",
+            "mensaje": null,
+            "imagen": null,
+            "boton": "Verificarme",
+            "tipo": "captcha",
+            "captcha_texto": "fijate",
+            "canal_logs": 1483547511540023410
+        },
+        "67": {
+            "rol_dar": 1483543777334263808,
+            "rol_quitar": 1483546670280212672,
+            "titulo": "Verificaci\u00f3n",
+            "descripcion": "Verificate para acceder a los dem\u00e1s canales",
+            "mensaje": null,
+            "imagen": null,
+            "boton": "Verificarme",
+            "tipo": "captcha",
+            "captcha_texto": "f\u00edjate en todo antes de responder",
+            "canal_logs": 1483547511540023410
+        },
+        "99": {
+            "rol_dar": 1483543777334263808,
+            "rol_quitar": 1483546670280212672,
+            "titulo": "Verificacion\ud83d\udd10",
+            "descripcion": "\u00a1Bienvenido/a! Antes de acceder al servidor, **necesitamos que completes una peque\u00f1a verificaci\u00f3n** para garantizar la seguridad de la comunidad.\n**\u2705 Instrucciones:**\nHaz clic en el bot\u00f3n de abajo para verificarte.\nAseg\u00farate de haber le\u00eddo las normas del servidor.\nUna vez verificado/a, se te dar\u00e1 acceso completo.\n**\u26a0\ufe0f Importante:**\nSi tienes problemas con la verificaci\u00f3n, no dudes en abrir ticket",
+            "mensaje": null,
+            "imagen": "https://cdn.discordapp.com/attachments/1483535097729908821/1484234374533873695/copilot_image_1773756821678.jpg?ex=69c2c27a&is=69c170fa&hm=5260d980b48d23a05c2de6a2cd68721425640d4bd168bbf1ffa948cdf784b098&",
+            "boton": "Verificarme",
+            "tipo": "captcha",
+            "captcha_texto": "f\u00edjate en todo",
+            "canal_logs": 1483547511540023410,
+            "max_fallos": 2,
+            "cooldown_fallos": 20
+        }
+    }
+}

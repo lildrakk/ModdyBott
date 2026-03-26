@@ -1,0 +1,162 @@
+{
+    "enabled": true,
+    "whitelist": [
+        "https://discord.gg"
+    ],
+    "allow_discord_invites": true,
+    "allowed_invites": [],
+    "1464575509785612380": {
+        "enabled": true,
+        "allow_discord_invites": false,
+        "allowed_roles": [],
+        "whitelist_users": [
+            1394342273919225959
+        ],
+        "whitelist_roles": [
+            1466470478720925716
+        ],
+        "whitelist_domains": [],
+        "allowed_servers": [],
+        "block_shorteners": true,
+        "block_obfuscated": true,
+        "accion": "mute",
+        "mute_time": 200,
+        "allow_invites": false,
+        "log_channel": 1466472645670207562
+    },
+    "1482947648435785891": {
+        "enabled": false,
+        "accion": "mute",
+        "mute_time": 600,
+        "allow_invites": false,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": null
+    },
+    "1464286508084367525": {
+        "enabled": false,
+        "accion": "mute",
+        "mute_time": 600,
+        "allow_invites": false,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": null
+    },
+    "1478165160018317312": {
+        "enabled": false,
+        "accion": "mute",
+        "mute_time": 600,
+        "allow_invites": false,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": null
+    },
+    "1461036151207891117": {
+        "enabled": false,
+        "accion": "mute",
+        "mute_time": 600,
+        "allow_invites": false,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": null
+    },
+    "1337461418458349601": {
+        "enabled": false,
+        "accion": "mute",
+        "mute_time": 600,
+        "allow_invites": false,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": null
+    },
+    "1483535097729908818": {
+        "enabled": true,
+        "accion": "mute",
+        "mute_time": 100,
+        "allow_invites": false,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": 1483547511540023410
+    },
+    "1470187143409307836": {
+        "enabled": true,
+        "accion": "mute",
+        "mute_time": 60,
+        "allow_invites": false,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": 1470199743454904391
+    },
+    "1434615604060360908": {
+        "enabled": true,
+        "accion": "mute",
+        "mute_time": 60,
+        "allow_invites": true,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": 1478106747901055077
+    },
+    "1459744479744622746": {
+        "enabled": false,
+        "accion": "mute",
+        "mute_time": 600,
+        "allow_invites": false,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": null
+    },
+    "1480444313178738778": {
+        "enabled": false,
+        "accion": "mute",
+        "mute_time": 600,
+        "allow_invites": false,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": null
+    },
+    "1423426552292446222": {
+        "enabled": false,
+        "accion": "mute",
+        "mute_time": 600,
+        "allow_invites": false,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": null
+    },
+    "1469966443926781976": {
+        "enabled": false,
+        "accion": "mute",
+        "mute_time": 600,
+        "allow_invites": false,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": null
+    },
+    "1484246746703069268": {
+        "enabled": false,
+        "accion": "mute",
+        "mute_time": 600,
+        "allow_invites": false,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": null
+    },
+    "1478441870689566832": {
+        "enabled": false,
+        "accion": "mute",
+        "mute_time": 600,
+        "allow_invites": false,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": null
+    },
+    "1342196262732038266": {
+        "enabled": false,
+        "accion": "mute",
+        "mute_time": 600,
+        "allow_invites": false,
+        "whitelist_users": [],
+        "whitelist_roles": [],
+        "log_channel": null
+    }
+}

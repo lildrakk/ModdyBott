@@ -1,0 +1,42 @@
+{
+    "1482947648435785891": {
+        "enabled": false,
+        "log_channel": null
+    },
+    "1464286508084367525": {
+        "enabled": false,
+        "log_channel": null
+    },
+    "1478165160018317312": {
+        "enabled": false,
+        "log_channel": null
+    },
+    "1464575509785612380": {
+        "enabled": false,
+        "log_channel": null
+    },
+    "1483535097729908818": {
+        "enabled": false,
+        "log_channel": 1483547511540023410
+    },
+    "1470187143409307836": {
+        "enabled": true,
+        "log_channel": null
+    },
+    "1434615604060360908": {
+        "enabled": true,
+        "log_channel": 1478106747901055077
+    },
+    "1337461418458349601": {
+        "enabled": false,
+        "log_channel": null
+    },
+    "1342196262732038266": {
+        "enabled": false,
+        "log_channel": null
+    },
+    "1450617527297380516": {
+        "enabled": false,
+        "log_channel": null
+    }
+}

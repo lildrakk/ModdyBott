@@ -105,7 +105,7 @@ class Moderacion(commands.Cog):
     # WARNINGS LIST
     # ============================
 
-    @app_commands.command(name="warnings", description="Muestra los warnings de un usuario")
+    @app_commands.command(name="ver_warns", description="Muestra los warnings de un usuario")
     async def warnings(self, interaction: discord.Interaction, usuario: discord.User):
         try:
             with open("warnings.json", "r") as f:
@@ -139,10 +139,10 @@ class Moderacion(commands.Cog):
 
 
     # ============================
-    # DELETE ONE WARNING
+    # ELIMINAR WARN
     # ============================
 
-    @app_commands.command(name="delwarn", description="Elimina un warning específico de un usuario")
+    @app_commands.command(name="eliminar_warn", description="Elimina un warning específico de un usuario")
     @app_commands.describe(usuario="Usuario al que quieres quitar el warn", numero="Número del warn a eliminar (1, 2, 3...)")
     async def delwarn(self, interaction: discord.Interaction, usuario: discord.User, numero: int):
         if not interaction.user.guild_permissions.kick_members:
@@ -186,10 +186,10 @@ class Moderacion(commands.Cog):
         )
 
     # ============================
-    # CLEAR WARNINGS
+    # ELIMINAR WARNS
     # ============================
 
-    @app_commands.command(name="clearwarnings", description="Limpia los warnings de un usuario")
+    @app_commands.command(name="eliminar_warns", description="Limpia todos los warns de un usuario")
     async def clearwarnings(self, interaction: discord.Interaction, usuario: discord.User):
         if not interaction.user.guild_permissions.kick_members:
             return await interaction.response.send_message("❌ No tienes permisos.", ephemeral=True)

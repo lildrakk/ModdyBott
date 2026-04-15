@@ -79,10 +79,9 @@ class Giveaways(commands.Cog):
     @discord.app_commands.describe(
         tiempo="Duración del sorteo (10s, 5m, 2h, 1d)",
         ganadores="Cantidad de ganadores",
-        premio="Premio del sorteo",
-        gif="Enlace del GIF para mostrar en el embed"
+        premio="Premio del sorteo"
     )
-    async def giveaway(self, interaction: discord.Interaction, tiempo: str, ganadores: int, premio: str, gif: str):
+    async def giveaway(self, interaction: discord.Interaction, tiempo: str, ganadores: int, premio: str):
 
         unidades = {"s": 1, "m": 60, "h": 3600, "d": 86400}
 
@@ -101,14 +100,17 @@ class Giveaways(commands.Cog):
             )
 
         duracion = cantidad * unidades[tiempo[-1].lower()]
-        fin = datetime.datetime.utcnow() + datetime.timedelta(seconds=duracion)
+
+        # TIEMPO ARREGLADO (UTC CORRECTO)
+        fin = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(seconds=duracion)
+        timestamp = int(fin.timestamp())
 
         giveaway_id = random.randint(100000, 999999)
 
         giveaways[str(giveaway_id)] = {
             "host": interaction.user.id,
             "premio": premio,
-            "fin": int(fin.timestamp()),
+            "fin": timestamp,
             "participantes": [],
             "canal": interaction.channel.id,
             "ganadores": ganadores
@@ -122,9 +124,8 @@ class Giveaways(commands.Cog):
                 "<:regalo:1483506548495093957> ¡Un nuevo sorteo ha comenzado en el servidor!\n\n"
                 "**<a:fuegoazul:1483506592325439540> Cómo participar:**\n"
                 "**1.** Pulsa el botón **Participar** de abajo\n"
-                "**2.** Deberas quedarte en el servidor durante todo el sorteo\n"
+                "**2.** Deberás quedarte en el servidor durante todo el sorteo\n"
                 "**3.** Espera a que termine el tiempo\n\n"
-                
             ),
             color=discord.Color(0x0A3D62)
         )
@@ -132,10 +133,12 @@ class Giveaways(commands.Cog):
         embed.add_field(name="<a:flechazul:1492182951532826684> Premio", value=premio, inline=False)
         embed.add_field(name="<a:fuegoazul:1483506592325439540> Ganadores", value=str(ganadores), inline=True)
         embed.add_field(name="<:user:1488971290302877967> Organizado por", value=interaction.user.mention, inline=True)
-        embed.add_field(name="<:cronometro:1493972193598509056> Finaliza", value=f"<t:{int(fin.timestamp())}:R>", inline=False)
+        embed.add_field(name="<:cronometro:1493972193598509056> Finaliza", value=f"<t:{timestamp}:R>", inline=False)
 
         embed.set_footer(text=f"ID del sorteo: {giveaway_id}")
-        embed.set_image(url=https://raw.githubusercontent.com/lildrakk/ModdyBot-web/eb6b1cb04336b0929a83cacad3b6834d11cedf8c/standard-3.gif )
+
+        # GIF FIJO (CORRECTO)
+        embed.set_image(url="https://raw.githubusercontent.com/lildrakk/ModdyBot-web/eb6b1cb04336b0929a83cacad3b6834d11cedf8c/standard-3.gif")
 
         view = GiveawayView(giveaway_id)
 
@@ -174,7 +177,7 @@ class Giveaways(commands.Cog):
         )
 
         resultado = discord.Embed(
-            title="<:giveaway:1494074344341639188> **SORTEO FINALIZADO**",
+            title="<:giveaway:1476336151835967640> **SORTEO FINALIZADO** <:giveaway:1476336151835967640>",
             description="¡Aquí están los ganadores!",
             color=discord.Color(0x0A3D62)
         )
@@ -217,7 +220,7 @@ class Giveaways(commands.Cog):
                 ephemeral=True
             )
 
-        # Filtrar participantes que sigan en el servidor también en el reroll
+        # Filtrar participantes válidos
         guild = interaction.guild
         participantes_validos = []
 

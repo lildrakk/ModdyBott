@@ -84,7 +84,7 @@ class Giveaways(commands.Cog):
     )
     async def giveaway(self, interaction: discord.Interaction, tiempo: str, ganadores: int, premio: str, gif: str):
 
-        unidades = {"s":1, "m":60, "h":3600, "d":86400}
+        unidades = {"s": 1, "m": 60, "h": 3600, "d": 86400}
 
         if tiempo[-1].lower() not in unidades:
             return await interaction.response.send_message(
@@ -94,7 +94,7 @@ class Giveaways(commands.Cog):
 
         try:
             cantidad = int(tiempo[:-1])
-        except:
+        except ValueError:
             return await interaction.response.send_message(
                 "❌ El tiempo debe empezar con un número. Ejemplo: 10s",
                 ephemeral=True
@@ -116,19 +116,15 @@ class Giveaways(commands.Cog):
 
         guardar_giveaways(giveaways)
 
-        # ============================
-        # EMBED ESTILO BLUECAT PERO ORIGINAL
-        # ============================
-
         embed = discord.Embed(
-            title="🎁 **SORTEO ACTIVO**",
+            title="<:giveaway:1494074344341639188> **SORTEO ACTIVO**",
             description=(
-                "🎉 ¡Un nuevo sorteo ha comenzado en el servidor!\n\n"
-                "**Cómo participar:**\n"
-                "➡️ Pulsa el botón **Participar** de abajo\n"
-                "➡️ Permanece en el servidor durante todo el sorteo\n"
-                "➡️ Espera a que finalice el tiempo\n\n"
-                "📌 *Si intentas unirte dos veces, el bot te avisará.*"
+                "<:regalo:1483506548495093957> ¡Un nuevo sorteo ha comenzado en el servidor!\n\n"
+                "**<a:fuegoazul:1483506592325439540> Cómo participar:**\n"
+                "**1.** Pulsa el botón **Participar** de abajo\n"
+                "**2.** Deberas quedarte en el servidor durante todo el sorteo\n"
+                "**3.** Espera a que termine el tiempo\n\n"
+                
             ),
             color=discord.Color(0x0A3D62)
         )
@@ -139,8 +135,6 @@ class Giveaways(commands.Cog):
         embed.add_field(name="⏳ Finaliza", value=f"<t:{int(fin.timestamp())}:R>", inline=False)
 
         embed.set_footer(text=f"ID del sorteo: {giveaway_id}")
-
-        # GIF SOLO EN EL EMBED DEL GIVEAWAY
         embed.set_image(url=gif)
 
         view = GiveawayView(giveaway_id)
@@ -154,7 +148,19 @@ class Giveaways(commands.Cog):
         if not data:
             return
 
-        participantes = data["participantes"]
+        # Filtrar participantes que sigan en el servidor
+        guild = interaction.guild
+        participantes_validos = []
+
+        for user_id in data["participantes"]:
+            miembro = guild.get_member(int(user_id))
+            if miembro is not None:
+                participantes_validos.append(user_id)
+
+        data["participantes"] = participantes_validos
+        guardar_giveaways(giveaways)
+
+        participantes = participantes_validos
 
         if len(participantes) == 0:
             await interaction.channel.send(f"❌ Nadie participó en el sorteo **{giveaway_id}**.")
@@ -211,11 +217,23 @@ class Giveaways(commands.Cog):
                 ephemeral=True
             )
 
-        participantes = data["participantes"]
+        # Filtrar participantes que sigan en el servidor también en el reroll
+        guild = interaction.guild
+        participantes_validos = []
+
+        for user_id in data["participantes"]:
+            miembro = guild.get_member(int(user_id))
+            if miembro is not None:
+                participantes_validos.append(user_id)
+
+        data["participantes"] = participantes_validos
+        guardar_giveaways(giveaways)
+
+        participantes = participantes_validos
 
         if len(participantes) == 0:
             return await interaction.response.send_message(
-                "❌ No hay participantes para reroll.",
+                "❌ No hay participantes válidos para reroll.",
                 ephemeral=True
             )
 
@@ -246,4 +264,4 @@ class Giveaways(commands.Cog):
 # ============================
 
 async def setup(bot):
-    await bot.add_cog(Giveaways(bot))
+    await bot.add_cog(Giveaways(bot)) 

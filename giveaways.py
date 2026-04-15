@@ -135,7 +135,7 @@ class Giveaways(commands.Cog):
         embed.add_field(name="<:cronometro:1493972193598509056> Finaliza", value=f"<t:{int(fin.timestamp())}:R>", inline=False)
 
         embed.set_footer(text=f"ID del sorteo: {giveaway_id}")
-        embed.set_image(url=gif)
+        embed.set_image(url=https://raw.githubusercontent.com/lildrakk/ModdyBot-web/eb6b1cb04336b0929a83cacad3b6834d11cedf8c/standard-3.gif )
 
         view = GiveawayView(giveaway_id)
 

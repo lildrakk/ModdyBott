@@ -129,10 +129,10 @@ class Giveaways(commands.Cog):
             color=discord.Color(0x0A3D62)
         )
 
-        embed.add_field(name="🏆 Premio", value=premio, inline=False)
-        embed.add_field(name="🥇 Ganadores", value=str(ganadores), inline=True)
-        embed.add_field(name="👤 Organizado por", value=interaction.user.mention, inline=True)
-        embed.add_field(name="⏳ Finaliza", value=f"<t:{int(fin.timestamp())}:R>", inline=False)
+        embed.add_field(name="<a:flechazul:1492182951532826684> Premio", value=premio, inline=False)
+        embed.add_field(name="<a:fuegoazul:1483506592325439540> Ganadores", value=str(ganadores), inline=True)
+        embed.add_field(name="<:user:1488971290302877967> Organizado por", value=interaction.user.mention, inline=True)
+        embed.add_field(name="<:cronometro:1493972193598509056> Finaliza", value=f"<t:{int(fin.timestamp())}:R>", inline=False)
 
         embed.set_footer(text=f"ID del sorteo: {giveaway_id}")
         embed.set_image(url=gif)
@@ -163,7 +163,7 @@ class Giveaways(commands.Cog):
         participantes = participantes_validos
 
         if len(participantes) == 0:
-            await interaction.channel.send(f"❌ Nadie participó en el sorteo **{giveaway_id}**.")
+            await interaction.channel.send(f"<:no:1476336151835967640> Nadie participó en el sorteo **{giveaway_id}**.")
             del giveaways[str(giveaway_id)]
             guardar_giveaways(giveaways)
             return
@@ -174,14 +174,14 @@ class Giveaways(commands.Cog):
         )
 
         resultado = discord.Embed(
-            title="🎉 **SORTEO FINALIZADO**",
+            title="<:giveaway:1476336151835967640> **SORTEO FINALIZADO**",
             description="¡Aquí están los ganadores!",
             color=discord.Color(0x0A3D62)
         )
 
-        resultado.add_field(name="🏆 Premio", value=data["premio"], inline=False)
+        resultado.add_field(name="<:regalo:1483506548495093957> Premio", value=data["premio"], inline=False)
         resultado.add_field(
-            name="🥇 Ganadores",
+            name="<:a:flechazul:1492182951532826684> Ganadores",
             value="\n".join([f"<@{g}>" for g in ganadores_finales]),
             inline=False
         )
@@ -243,14 +243,14 @@ class Giveaways(commands.Cog):
         )
 
         embed = discord.Embed(
-            title="🔄 **REROLL REALIZADO**",
+            title="<a:alarmazul:1491858094043693177> **REROLL REALIZADO**",
             description="Se han elegido nuevos ganadores",
             color=discord.Color(0x0A3D62)
         )
 
-        embed.add_field(name="🏆 Premio", value=data["premio"], inline=False)
+        embed.add_field(name="<:regalo:1491858094043693177> Premio", value=data["premio"], inline=False)
         embed.add_field(
-            name="🥇 Nuevos ganadores",
+            name="<a:flechazul:1491858094043693177> Nuevos ganadores",
             value="\n".join([f"<@{g}>" for g in ganadores_finales]),
             inline=False
         )

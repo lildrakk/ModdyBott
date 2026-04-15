@@ -174,14 +174,14 @@ class Giveaways(commands.Cog):
         )
 
         resultado = discord.Embed(
-            title="<:giveaway:1476336151835967640> **SORTEO FINALIZADO**",
+            title="<:giveaway:1494074344341639188> **SORTEO FINALIZADO**",
             description="¡Aquí están los ganadores!",
             color=discord.Color(0x0A3D62)
         )
 
         resultado.add_field(name="<:regalo:1483506548495093957> Premio", value=data["premio"], inline=False)
         resultado.add_field(
-            name="<:a:flechazul:1492182951532826684> Ganadores",
+            name="<a:flechazul:1492182951532826684> Ganadores",
             value="\n".join([f"<@{g}>" for g in ganadores_finales]),
             inline=False
         )
